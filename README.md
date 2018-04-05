@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# cs253
-=======
 # README
 
 ## What is this repository for?
@@ -163,4 +160,3 @@
 * [The Standard : Standard C++](https://isocpp.org/std/the-standard)
 
 * [Boost C++ Libraries](http://www.boost.org/)
->>>>>>> 29732491f5e7af457dcd87ff7fdc9a8053d280ef
