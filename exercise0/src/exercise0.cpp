@@ -5,3 +5,6 @@
 #include "exercise0.hpp"
 
 /* Return sum of two integers */
+int adder(int a, int b){
+    return a + b;
+}
