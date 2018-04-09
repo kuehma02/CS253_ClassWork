@@ -1,8 +1,9 @@
 #include "exercise2.hpp"
 
 //Task 1 implementation
-
-
+void task1 {
+    cout << "Enter name" << endl;
+}
 //Task 2 implementation
 
 
