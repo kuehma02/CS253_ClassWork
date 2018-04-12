@@ -28,7 +28,7 @@ bool task3(int age){
     if (age < 21){
         return(true);
     }
-    return(false);
+    return false;
 }
 
 //Task 4 implementation
