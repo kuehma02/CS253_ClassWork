@@ -1,3 +1,9 @@
+/*
+ * Assignment: Exercise 3
+ * Author: Madeline Kuehn
+ * Date: 2018-04-13
+ */
+
 #include "exercise3.hpp"
 
 //Assuming the values in the array are grades (0-100), print number of students with 'A', 'B', 'C', 'D' and 'F'.

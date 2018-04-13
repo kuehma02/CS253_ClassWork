@@ -1,7 +1,7 @@
 /*
  * Assignment: Exercise 3
- * Author: Roman Yasinovskyy
- * Date: 2018-04-10
+ * Author: Madeline Kuehn
+ * Date: 2018-04-13
  */
 #ifndef EXERCISE3_H
 #define EXERCISE3_H

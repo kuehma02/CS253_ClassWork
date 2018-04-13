@@ -1,3 +1,9 @@
+/*
+ * Assignment: Exercise 3
+ * Author: Madeline Kuehn
+ * Date: 2018-04-13
+ */
+
 #include "exercise3.hpp"
 
 int main(int argc, char * argv[]) {
