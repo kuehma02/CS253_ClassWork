@@ -8,7 +8,12 @@ int main() {
      * Task 1
      * Declare and initialize a variable of type Contact and print its values.
      * */
-    //TODO
+    Contact *contact1;
+    contact1->name ="Alice";
+    contact1->phone = "563-555-1234";
+    Contact contact2;
+    contact2.name ="Roman";
+    contact2.phone = "563-387-1171";
     cout << contact1->name << ": " << contact1->phone << endl;
     cout << contact2.name << ": " << contact2.phone << endl;
 
@@ -20,6 +25,13 @@ int main() {
      * Declare and initialize a variable of type Room and print its values.
      * */
     //TODO
+    Room *room1;
+    room1->building="Main";
+    room1->number = 101;
+
+    Room room2;
+    room2.building = "Olin";
+    room2.number = 202;
     cout << room1->building << " " << room1->number << endl;
     cout << room2.building << " " << room2.number << endl;
 
@@ -33,6 +45,34 @@ int main() {
      * */
     //TODO
 
+    Employee *employee1;
+    employee1->firstName = "Alice";
+    employee1->lastName = "Anderson";
+    employee1->salary = 100000;
+    employee1->isFullTime = true;
+
+    Employee employee2;
+    employee2.firstName = "Bob";
+    employee2.lastName = "Black";
+    employee2.salary = 50000;
+    employee2.isFullTime = false;
+
+    cout << employee1->firstName << employee1->lastName << " is a ";
+    if (employee1->isFullTime){
+        cout << "full time employee ";
+    }else{
+        cout << "part time employee ";
+    }
+    cout << "earning " << fixed << setprecision(2) << employee1->salary << endl;
+
+    cout << employee2.firstName << employee2.lastName << " is a ";
+    if (employee2.isFullTime){
+        cout << "full time employee ";
+    }else{
+        cout << "part time employee ";
+    }
+    cout << "earning " << fixed << setprecision(2) << employee2.salary << endl;
+
     delete employee1;
 
     cout << "\nTask 4" << endl;
@@ -44,7 +84,27 @@ int main() {
     double weight1, weight2;
     weight1 = rand() % 1000;
     weight2 = rand() % 1000;
-    //TODO
+    Animal *animal1;
+    animal1->weight = weight1;
+    animal1->isHungry = true;
+
+    Animal animal2;
+    animal2.weight = weight2;
+    animal2.isHungry = false;
+
+    if (animal1->isHungry){
+        cout << "Hungry";
+    }else{
+        cout << "Well-fed";
+    }
+    cout << " animal weighs " << animal1->weight;
+
+    if (animal2.isHungry){
+        cout << "Hungry";
+    }else{
+        cout << "Well-fed";
+    }
+    cout << " animal weighs " << animal2.weight;
 
     delete animal1;
     
@@ -56,9 +116,20 @@ int main() {
      * Change the value of rating and print them again.
      * */
     //TODO
+    Game *game1;
+    game1->title = "The Legend of Zelda: Breath of the Wild";
+    game1->rating =9;
+    
+    Game game2;
+    game2.title = "Resident Evil 7: Biohazard";
+    game2.rating = 8;
+
     cout << game1->title << " has a rating of " << game1->rating << endl;
     cout << game2.title << " has a rating of " << game2.rating << endl;
-    //TODO
+    
+    game1->rating = 10;
+    game2.rating = 7;
+
     cout << game1->title << " has a rating of " << game1->rating << endl;
     cout << game2.title << " has a rating of " << game2.rating << endl;
 
@@ -70,7 +141,18 @@ int main() {
      * Declare and initialize a vector of 3 Songs.
      * Print the values of all songs.
      * */
-    //TODO
+    Song song1;
+    song1.title = "Perfect";
+    song1.artist = "Ed Sheeran";
+    Song song2;
+    song2.title = "Finesse";
+    song2.artist = "Bruno Mars & Cardi B";
+    Song song3;
+    song1.title = "Pray For Me";
+    song1.artist = "The Weeknd & Kendrick Lamar";
+    cout <<song1.title << " by " << song1.artist << endl;
+    cout <<song2.title << " by " << song2.artist << endl;
+    cout <<song3.title << " by " << song3.artist << endl;
 
     cout << "\nTask 7" << endl;
     /*
@@ -79,9 +161,15 @@ int main() {
      * Use function setStockPrice() to change the value of stockPrice.
      * Use function getStockPrice() to print the value of stockPrice.
      * */
-    //TODO
+    
+    Company *company1;
+
+
+
     cout << company1->name << " stock price: " << getStockPrice(*company1) << endl;
-    //TODO
+    
+    //setStockPrice(*company1);
+    
     cout << company1->name << " stock price: " << getStockPrice(*company1) << endl;
 
     delete company1;
@@ -92,6 +180,9 @@ int main() {
      * Declare and initialize a variable of type Laptop and print its values.
      * */
     //TODO
+
+    Laptop *laptop1;
+    Laptop laptop2;
    
     cout << laptop1->color << " laptop by " << laptop1->manufacturer << " costs " << fixed << laptop1->price << endl;
     //TODO
