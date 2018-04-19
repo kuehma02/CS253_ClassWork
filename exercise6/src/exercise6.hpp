@@ -13,9 +13,11 @@
 using namespace std;
 
 struct Game {
-    /*
-     * Add members of the structure here
-     * */
+    string title;
+    string author;
+    string platform;
+    int realeaseYear;
+    double price;
 
     /* 
      * Display game properties (title, publisher, platform, release year, price) on the standard output (console)
@@ -24,6 +26,8 @@ struct Game {
 };
 
 struct State {
+
+    // getline(ifstream, var, del)
     /*
      * Add members of the structure here
      * */
