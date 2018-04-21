@@ -26,8 +26,14 @@ struct Game {
 };
 
 struct State {
-
+    string stateID;
+    double tax;
+    string stateName;
+    
     // getline(ifstream, var, del)
+    vector<State> *states;
+    void readStates(ifstream fileIn, vector<State> *states);
+    
     /*
      * Add members of the structure here
      * */
