@@ -31,6 +31,7 @@ int main() {
     cout << "Read " << games.size() << " games(s) from the file" << endl;
 
     vector<GameInCart> cart;
+    GameInCart cart1;
     char ans = 'y';
     do {
     /*
@@ -40,6 +41,23 @@ int main() {
      * Keep asking if the uer wants to buy another one
      * Don't crash if the user enters bogus numbers
      * */
+    displayInventory(games);
+    int gameNumber = 0;
+    int copyNumber = 0;
+
+    gameNumber = readANumber(1,11);
+    cout << "How many copies of " << (games.at(gameNumber-1)).title << " do you want to buy?" << endl;
+
+    copyNumber = readANumber(0, 32767);
+
+    cart1.title = games.at(gameNumber -1).title;
+    cart1.platform = games.at(gameNumber -1).platform;
+    cart1.price = games.at(gameNumber - 1).price;
+    cart1.quantity = copyNumber;
+    cart.push_back(cart1);
+
+    cout << "Would you like to buy another game (y/n)?" << endl;
+    cin >> ans;
     } while (ans == 'y');
     double salesTax = 0;
     readState(states, salesTax);

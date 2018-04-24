@@ -14,9 +14,9 @@ using namespace std;
 
 struct Game {
     string title;
-    string author;
+    string publisher;
     string platform;
-    int realeaseYear;
+    int releaseYear;
     double price;
 
     /* 
@@ -31,8 +31,8 @@ struct State {
     string stateName;
     
     // getline(ifstream, var, del)
-    vector<State> *states;
-    void readStates(ifstream fileIn, vector<State> *states);
+    // vector<State> *states;
+    // void readStates(ifstream fileIn, vector<State> *states);
     
     /*
      * Add members of the structure here
@@ -43,6 +43,11 @@ struct GameInCart {
     /*
      * Add members of the structure here
      * */
+    string title;
+    string platform;
+    double price;
+    int quantity;
+
     /*
      * Display game properties (title, platform, price, quantity) on the standard output (console)
      * */
