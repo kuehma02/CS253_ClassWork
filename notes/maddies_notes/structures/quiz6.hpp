@@ -1,4 +1,4 @@
-#ifndef QUIZ6_H
+#ifdef QUIZ6_H
 #define QUIZ6_H
 #include <bits/stdc++.h>
 using namespace std;
