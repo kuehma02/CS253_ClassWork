@@ -7,7 +7,6 @@ struct Book {
     string title;
     string author;
     int pages;
-    private:
-        double price;
+    double price;
 
 };
