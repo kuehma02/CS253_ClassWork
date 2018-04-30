@@ -21,3 +21,11 @@ Roster::Roster(const char* filename) {
 
     fileIn.close();
 }
+
+ostream& operator<<(ostream& os, const Roster& r) {
+    /* This function is fully implemented */
+    for (uint i = 0; i < r.studentList.size(); i++) {
+        cout << r.studentList.at(i) << endl;
+    }
+    return os;
+}

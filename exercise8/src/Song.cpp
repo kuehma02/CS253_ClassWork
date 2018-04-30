@@ -8,4 +8,4 @@ Song::Song(string title, string artist) {
 ostream& operator<<(ostream& os, const Song& s) {
     os << s.title << " by " << s.artist;
     return os;
-}
+} 
