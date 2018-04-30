@@ -1,6 +1,6 @@
 /*
  * Assignment: Exercise 7
- * Author: Roman Yasinovskyy
+ * Author: Madeline Kuehn
  * Date: 2018-04-24
  */
 #ifndef EXERCISE7_H
