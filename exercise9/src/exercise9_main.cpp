@@ -1,6 +1,7 @@
 #include "exercise9.hpp"
 #include "HourlyEmployee.hpp"
 #include "SalariedEmployee.hpp"
+#include <sstream>
 
 
 void readCompanyFromFile(string filename) {
@@ -8,7 +9,45 @@ void readCompanyFromFile(string filename) {
     vector<HourlyEmployee> he_vec = vector<HourlyEmployee>();
     ifstream infile(filename.c_str());
     while (!infile.eof()) {
+        string employee;
+        int comma = 0;
+        getline(infile, employee);
+        
+        for(char& c : employee) {
+            if (c == ',' ){
+                comma += 1;
+            }
+        }
+
+        stringstream e(employee);
+        string name, department, tsalary, thours, trate;
+        int salary, hours;
+        double rate;
+
+        if (comma == 2){
+            getline(e, name, ',');
+            getline(e, department,  ',');
+            getline(e, tsalary, '\n');
+            salary = stoi(tsalary);
+            
+            se_vec.push_back(SalariedEmployee(name, department, salary));
+        }
+        if (comma == 3){
+            getline(e, name, ',');
+            getline(e, department,  ',');
+            getline(e, trate, ',');
+            getline(e, thours, '\n');
+            rate = stod(trate); 
+            hours = stoi(thours);
+
+            he_vec.push_back(HourlyEmployee(name, department, hours, rate));
+        }
+
+
+
         // Create either an Hourly or a Salaried employee from each line
+
+        //count commas, parse, read into hourly or salaried vector
     }
     cout << "Salaried Employees" << endl;
     for (SalariedEmployee se: se_vec) {
