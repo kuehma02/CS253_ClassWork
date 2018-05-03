@@ -6,6 +6,8 @@ Parrot::Parrot(string name, int age, int eggs, bool talking):
     };
 
 string Parrot::sound() const {
-    // TODO: implement the function
-    return "Implement me";
+    if (talking == true){
+        return "I want a cracker";
+    }
+    return "ARGHHH!";
 }
