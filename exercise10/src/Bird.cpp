@@ -9,8 +9,7 @@ ostream& operator<<(ostream& os, const Bird& b) {
     os << (const Animal &) b << " to lay " << b.eggs ;
     if (b.eggs == 1){
         os << " egg";
-    }
-    else {
+    } else {
         os << " eggs";
     }
        
