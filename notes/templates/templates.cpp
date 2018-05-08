@@ -2,9 +2,28 @@
 
 using namespace std;
 
+int greaterInt(int n1, int n2){
+    if (n1>n2) return n1;
+    return n2;
+}
+double greaterDouble(double n1, double n2){
+    if (n1>n2) return n1;
+    return n2;
+}
 
 
 int main() {
+    // vector<int> v1;
+    // vector<string> v2;
+    // vector<Student> v3;
+
+    int a =3, b=5;
+    cout << greaterInt(a,b) << endl;
+    
+    double c = 3.4, d = 3.5;  
+    cout << greaterDouble(c,d) << endl;
+
+
     cout << setw(60) << left << "Data type" << setw(10) << "Value" << endl;
     // Bubble<bool> bBln = Bubble<bool>(true);
     // cout << setw(60) << left << typeid(bBln.getValue()).name() << setw(10) << boolalpha << bBln << endl;
