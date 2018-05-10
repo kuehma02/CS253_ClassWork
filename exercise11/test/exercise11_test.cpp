@@ -47,7 +47,7 @@ TEST_CASE ( "Add 3", "[add3]" ) {
     CHECK ( add3(10000000000, 20000000000, 30000000000) == 60000000000 );
 }
 
-TEST_CASE ( "Add N", "[addN]" ) {
+TEST_CASE ( "Add N", "[addN]" ) {        
     CHECK ( addN(3) == 3 );
     CHECK ( addN(1.5, 1.2, 1.3) == 4.0 );
     CHECK ( addN<string>("Hello ", "students", " ", "of ", "CS253") == "Hello students of CS253" );
