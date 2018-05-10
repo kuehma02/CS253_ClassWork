@@ -26,7 +26,7 @@ long long fiboRec(long long iter){
 
 long long factIte(long long iter){
     long long result = 1;
-    for (int i = 1; i < iter; i++){
+    for (int i = 1; i <= iter; i++){
         result = result * i;
     }
     return result;
@@ -45,10 +45,28 @@ long long factRec(long long iter){
 
 string convert(long long num, int base){
     string s;
-
     while (num > 0){
-        int bit = num % base;
-        s = to_string(bit) + s;
+        string bit;
+        if (base == 16) {
+            switch (num % base){
+                case 10: bit = "A";
+                        break;
+                case 11: bit = "B";
+                        break;
+                case 12: bit = "C";
+                        break;
+                case 13: bit = "D";
+                        break;
+                case 14: bit = "E";
+                        break;
+                case 15: bit = "F";
+                        break;
+            }
+        } else {
+            int val = num % base;
+            bit = to_string(val);
+        }
+        s = bit + s;
         num = num / base;
     }
     return s;
@@ -66,7 +84,7 @@ T addN(T n) {
 
 template <typename T, typename ... Targs>
 T addN(T first, Targs ... others){
-    return first + addN(others ...);
+    return first + addN<T>(others ...);
 }
 
 template <typename T>
@@ -79,7 +97,6 @@ T max3(T n1, T n2, T n3){
         }
         return n3;
     }
-
 }
 
 template <typename T>
@@ -96,11 +113,24 @@ T maxN(T n1, T n2){
 }
 
 template <typename T, typename ...Targs>
-T maxN(T, Targs ...);
+T maxN(T first, Targs ... others){
+    return maxN(others ...);
+}
+
+template <typename T>
+int countN(T someValue) {
+    return 1;
+}
+
+template <typename T, typename ... Targs>
+int countN(T first, Targs ... others) {
+    return 1 + countN(others ...);
+}
 
 template <typename T, typename ...Targs>
 double avgN(T first, Targs ... others){
-    int numArgs = 1 + sizeof...(Targs);
-    double average =(first + (numArgs)*avgN(others...)) / (numArgs); 
+    double added = addN(first, others...);
+    double total = countN(first, others...);
+    double average = added / total;
     return average;
 }
