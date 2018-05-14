@@ -39,7 +39,7 @@ int size(set<T>& set) {
 
 // Define a function that uses a map.
 template <class T, class U>
-T clearAll(map<T, U>& m) {
+void clearAll(map<T, U>& m) {
     m.clear();
 }
 

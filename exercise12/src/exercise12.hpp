@@ -30,10 +30,13 @@ template <class T>
 T topElement(priority_queue<T>&); 
 
 // Declare a function that uses a set.
-template <class T, class U>
-T clearAll(map<T, U>&); 
+template <class T>
+int size(set<T>&); 
 
 // Declare a function that uses a map.
+
+template <class T, class U>
+void clearAll(map<T, U>&);
 
 // Declare a function that uses any other container.
 template <class T>
