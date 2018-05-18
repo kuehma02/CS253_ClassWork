@@ -1,6 +1,6 @@
 /*
  * Assignment: Exercise 13
- * Author: Roman Yasinovskyy
+ * Author:Madeline Kuehn
  * Date: 2018-05-06
  */
 #ifndef EXERCISE13_H
@@ -11,8 +11,28 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
+
+struct Team {
+    string name; 
+    int wins = 0;
+    int losses = 0;
+    int appearances = 0;
+    list<int>appearyears;  
+    list<int> winyears; 
+    list<int> loseyears;
+    int winningSequence;
+    int losingSequence;
+    int appearanceSequence;  
+};
+
+map<string, Team> createteams(string filename);
+bool CompareByName(const Team &team1, const Team &team2);
+bool CompareByAppearances(const Team &team1, const Team &team2);
+bool CompareByWins(const Team &team1, const Team &team2);
+bool CompareByLosses(const Team &team1, const Team &team2);
 
 // A team with the most appearances in the final
 string mostAppearances(string);
